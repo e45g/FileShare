@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn-icon-primary {
+    @apply inline-block box-border aspect-square
+    bg-primary
+    text-center align-middle font-bold text-light text-2xl
+    rounded-xl transition-transform
+    focus:-translate-y-1 hover:-translate-y-1
+    active:translate-y-0.5 active:bg-secondary/90;
+    line-height: 50px;
+    height: 3.2rem;
+    width: 3.2rem;
+}
+
+.btn-primary {
+    @apply text-center px-6 py-3 font-bold bg-primary text-light rounded-xl transition-transform
+    focus:-translate-y-1 hover:-translate-y-1
+    active:translate-y-0.5 active:bg-secondary/90;
+    text-transform: lowercase;
+}
+
+.label {
+    @apply lg:invisible text-sm text-slate-600 w-16 inline-block font-normal lg:w-0;
+}
+
+.break {
+    @apply w-0 inline-block;
+}
+
+.tm-backdrop-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tm-menu {
+    right: -320px;
+}
+
+.tm-menu-open {
+    right: 0;
+    visibility: visible;
+}
+
+.tm-content-scale {
+    transform: scale(0.9);
+}
+
+.tm-transition {
+    transition-duration: .3s !important;
+}
+
+.tm-notification-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.85) translateY(100px);
+    transition: all .3s cubic-bezier(0.43, 1.44, 0.75, 1.17);
+}
+
+.tm-notification-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1) translateY(0);
+}
